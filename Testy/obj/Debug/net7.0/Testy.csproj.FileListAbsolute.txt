@@ -100,3 +100,4 @@ C:\Users\huber\RiderProjects\KalkulatorFunkcje\Testy\obj\Debug\net7.0\refint\Tes
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\Testy\obj\Debug\net7.0\Testy.pdb
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\Testy\obj\Debug\net7.0\Testy.genruntimeconfig.cache
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\Testy\obj\Debug\net7.0\ref\Testy.dll
+C:\Users\huber\RiderProjects\KalkulatorFunkcje\Testy\obj\Debug\net7.0\Testy.sourcelink.json

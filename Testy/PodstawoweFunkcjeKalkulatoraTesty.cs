@@ -6,7 +6,7 @@ namespace Testy;
 public class Tests
 {
     [TestFixture]
-    public class PrimeService_IsPrimeShould
+    public class PodstawoweFunkcjeTest
     {
         [Test]
         public void DodawanieZera()
@@ -72,6 +72,7 @@ public class Tests
             Assert.That(1, Is.EqualTo(PodstawoweFunkcje.Dzielenie(1, 1)));
 
         }
+        [Test]
         public void DzielenieModuloZera()
         {
             Assert.Throws(Is.TypeOf<Exception>()
@@ -81,7 +82,7 @@ public class Tests
         [Test]
         public void DzielenieModuloUjemnych()
         {
-            Assert.That(8, Is.EqualTo(PodstawoweFunkcje.DzielenieModulo(-2, -4)));
+            Assert.That(-2, Is.EqualTo(PodstawoweFunkcje.DzielenieModulo(-2, -4)));
         }
         [Test]
         public void DzielenieModuloDodatnie()

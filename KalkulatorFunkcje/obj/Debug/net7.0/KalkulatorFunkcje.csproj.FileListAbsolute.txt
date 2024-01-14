@@ -1,7 +1,6 @@
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\bin\Debug\net7.0\KalkulatorFunkcje.deps.json
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\bin\Debug\net7.0\KalkulatorFunkcje.dll
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\bin\Debug\net7.0\KalkulatorFunkcje.pdb
-C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.0\KalkulatorFunkcje.csproj.AssemblyReference.cache
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.0\KalkulatorFunkcje.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.0\KalkulatorFunkcje.AssemblyInfoInputs.cache
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.0\KalkulatorFunkcje.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.0\refint\KalkulatorFunkcje.dll
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.0\KalkulatorFunkcje.pdb
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.0\ref\KalkulatorFunkcje.dll
+C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net7.0\KalkulatorFunkcje.sourcelink.json
