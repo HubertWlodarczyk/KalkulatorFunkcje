@@ -2,5 +2,5 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=B1B50394_002D954B_002D4C54_002DAEFE_002D93080B5D519E/@EntryIndexedValue">82893E91-B998-486B-9083-748920B5C913</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=NUnit3x/@EntryIndexedValue">db4927dd-2e12-48a7-9a84-2b7e3e31b9c8</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d1b573ee_002D379c_002D44d0_002D8165_002D8440ccaea177/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from PodstawoweFunkcjeKalkulatoraTesty.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\huber\RiderProjects\KalkulatorFunkcje\Testy" Presentation="&amp;lt;Testy&amp;gt;" /&gt;&#xD;
+  &lt;Project Location="C:\Users\mierz\RiderProjects\GIT\Testy" Presentation="&amp;lt;Testy&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -37,21 +37,21 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <TextBox Grid.Row="0" Grid.ColumnSpan="10" Grid.RowSpan="2"></TextBox>
+        <TextBox Grid.Row="0" Grid.ColumnSpan="10" Grid.RowSpan="2" Name="ValueBox">0</TextBox>
         <TextBox Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="2"></TextBox>
 
         
         <StackPanel Grid.Row="5" Grid.RowSpan="3" Grid.ColumnSpan="2">
-            <RadioButton>Hex</RadioButton>
-            <RadioButton>Dec</RadioButton>
-            <RadioButton>Oct</RadioButton>
-            <RadioButton>Bin</RadioButton>
+            <RadioButton Click="ButtonSystemHex">Hex</RadioButton>
+            <RadioButton Click="ButtonSystemDec" IsChecked="True">Dec</RadioButton>
+            <RadioButton Click="ButtonSystemOct">Oct</RadioButton>
+            <RadioButton Click="ButtonSystemBin">Bin</RadioButton>
         </StackPanel>
         <StackPanel Grid.Row="8" Grid.RowSpan="3" Grid.ColumnSpan="2">
-            <RadioButton>Qword</RadioButton>
-            <RadioButton>Dword</RadioButton>
-            <RadioButton>Word</RadioButton>
-            <RadioButton>Byte</RadioButton>
+            <RadioButton Click="ButtonSystemlengthQword" IsChecked="True">Qword</RadioButton>
+            <RadioButton Click="ButtonSystemlengthDword">Dword</RadioButton>
+            <RadioButton Click="ButtonSystemlengthWord">Word</RadioButton>
+            <RadioButton Click="ButtonSystemlengthByte">Byte</RadioButton>
         </StackPanel>
         
         <Button Grid.Row="5" Grid.Column="2" IsEnabled="False"></Button>
@@ -61,51 +61,51 @@
         <Button Grid.Row="9" Grid.Column="2">Lsh</Button>
         <Button Grid.Row="10" Grid.Column="2">Not</Button>
         
-        <Button Grid.Row="5" Grid.Column="3">Mod</Button>
+        <Button Grid.Row="5" Grid.Column="3" Click="ModuloDivision">Mod</Button>
         <Button Grid.Row="6" Grid.Column="3">)</Button>
         <Button Grid.Row="7" Grid.Column="3">RoR</Button>
         <Button Grid.Row="8" Grid.Column="3">Xor</Button>
         <Button Grid.Row="9" Grid.Column="3">Rsh</Button>
         <Button Grid.Row="10" Grid.Column="3">And</Button>
         
-        <Button Grid.Row="5" Grid.Column="4">A</Button>
-        <Button Grid.Row="6" Grid.Column="4">B</Button>
-        <Button Grid.Row="7" Grid.Column="4">C</Button>
-        <Button Grid.Row="8" Grid.Column="4">D</Button>
-        <Button Grid.Row="9" Grid.Column="4">E</Button>
-        <Button Grid.Row="10" Grid.Column="4">F</Button>
+        <Button Grid.Row="5" Grid.Column="4" Click="Update">A</Button>
+        <Button Grid.Row="6" Grid.Column="4" Click="Update">B</Button>
+        <Button Grid.Row="7" Grid.Column="4" Click="Update">C</Button>
+        <Button Grid.Row="8" Grid.Column="4" Click="Update">D</Button>
+        <Button Grid.Row="9" Grid.Column="4" Click="Update">E</Button>
+        <Button Grid.Row="10" Grid.Column="4" Click="Update">F</Button>
         
         <Button Grid.Row="5" Grid.Column="5">MC</Button>
         <Button Grid.Row="6" Grid.Column="5">BACK</Button>
-        <Button Grid.Row="7" Grid.Column="5">7</Button>
-        <Button Grid.Row="8" Grid.Column="5">4</Button>
-        <Button Grid.Row="9" Grid.Column="5">1</Button>
-        <Button Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2">0</Button>
+        <Button Grid.Row="7" Grid.Column="5" Click="Update">7</Button>
+        <Button Grid.Row="8" Grid.Column="5" Click="Update">4</Button>
+        <Button Grid.Row="9" Grid.Column="5" Click="Update">1</Button>
+        <Button Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2" Click="Update">0</Button>
         
         <Button Grid.Row="5" Grid.Column="6">MR</Button>
-        <Button Grid.Row="6" Grid.Column="6">CE</Button>
-        <Button Grid.Row="7" Grid.Column="6">8</Button>
-        <Button Grid.Row="8" Grid.Column="6">5</Button>
-        <Button Grid.Row="9" Grid.Column="6">2</Button>
+        <Button Grid.Row="6" Grid.Column="6" Click="ClearEvrything">CE</Button>
+        <Button Grid.Row="7" Grid.Column="6" Click="Update">8</Button>
+        <Button Grid.Row="8" Grid.Column="6" Click="Update">5</Button>
+        <Button Grid.Row="9" Grid.Column="6" Click="Update">2</Button>
         
         <Button Grid.Row="5" Grid.Column="7">MS</Button>
-        <Button Grid.Row="6" Grid.Column="7">c</Button>
-        <Button Grid.Row="7" Grid.Column="7">9</Button>
-        <Button Grid.Row="8" Grid.Column="7">6</Button>
-        <Button Grid.Row="9" Grid.Column="7">3</Button>
-        <Button Grid.Row="10" Grid.Column="7">,</Button>
+        <Button Grid.Row="6" Grid.Column="7" Click="Clear">C</Button>
+        <Button Grid.Row="7" Grid.Column="7" Click="Update">9</Button>
+        <Button Grid.Row="8" Grid.Column="7" Click="Update">6</Button>
+        <Button Grid.Row="9" Grid.Column="7" Click="Update">3</Button>
+        <Button Grid.Row="10" Grid.Column="7" IsEnabled="False">,</Button>
         
         <Button Grid.Row="5" Grid.Column="8">M+</Button>
         <Button Grid.Row="6" Grid.Column="8">+/-</Button>
-        <Button Grid.Row="7" Grid.Column="8">/</Button>
-        <Button Grid.Row="8" Grid.Column="8">*</Button>
-        <Button Grid.Row="9" Grid.Column="8">-</Button>
-        <Button Grid.Row="10" Grid.Column="8">+</Button>
+        <Button Grid.Row="7" Grid.Column="8" Click="Division">/</Button>
+        <Button Grid.Row="8" Grid.Column="8" Click="Multiplication">*</Button>
+        <Button Grid.Row="9" Grid.Column="8" Click="Substract">-</Button>
+        <Button Grid.Row="10" Grid.Column="8" Click="Add">+</Button>
         
         <Button Grid.Row="5" Grid.Column="9">M-</Button>
-        <Button Grid.Row="6" Grid.Column="9">sqrt</Button>
-        <Button Grid.Row="7" Grid.Column="9">%</Button>
-        <Button Grid.Row="8" Grid.Column="9">1/x</Button>
-        <Button Grid.Row="9" Grid.Column="9" Grid.RowSpan="2">=</Button>
+        <Button Grid.Row="6" Grid.Column="9" IsEnabled="False">sqrt</Button>
+        <Button Grid.Row="7" Grid.Column="9" IsEnabled="False">%</Button>
+        <Button Grid.Row="8" Grid.Column="9" IsEnabled="False">1/x</Button>
+        <Button Grid.Row="9" Grid.Column="9" Grid.RowSpan="2" Click="Equal">=</Button>
     </Grid>
 </Window>

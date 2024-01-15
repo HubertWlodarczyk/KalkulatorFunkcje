@@ -1003,19 +1003,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\huber\\.nuget\\packages\\": {}
+    "C:\\Users\\mierz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\Testy\\Testy.csproj",
+      "projectUniqueName": "C:\\Users\\mierz\\RiderProjects\\GIT\\Testy\\Testy.csproj",
       "projectName": "Testy",
-      "projectPath": "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\Testy\\Testy.csproj",
-      "packagesPath": "C:\\Users\\huber\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\Testy\\obj\\",
+      "projectPath": "C:\\Users\\mierz\\RiderProjects\\GIT\\Testy\\Testy.csproj",
+      "packagesPath": "C:\\Users\\mierz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mierz\\RiderProjects\\GIT\\Testy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\huber\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mierz\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
@@ -1027,8 +1027,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {
-              "projectPath": "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj"
+            "C:\\Users\\mierz\\RiderProjects\\GIT\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {
+              "projectPath": "C:\\Users\\mierz\\RiderProjects\\GIT\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj"
             }
           }
         }
@@ -1080,7 +1080,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\huber\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

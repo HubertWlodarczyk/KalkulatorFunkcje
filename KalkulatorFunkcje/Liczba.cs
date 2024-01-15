@@ -4,6 +4,7 @@ public static class Liczba
 {
     public static int rozmiar=8;
     public static int format=10;
+    public static long firstValue;
     public static long wartosc=0;
 
     public static void SetQword()
@@ -40,11 +41,25 @@ public static class Liczba
         format = 16;
     }
 
-    public static long ToInt(String liczba)
+    public static long ToInt(string liczba)
     {
-        if (format == 16 && liczba.Any(char.IsLetter)) return 0;
-        return Convert.ToInt64(liczba, format);
+        if (format != 16 && liczba.Any(char.IsLetter))
+        {
+            Console.WriteLine("Niepoprawny format lub ciąg znaków zawiera litery.");
+            return 0;
+        }
+
+        try
+        {
+            return Convert.ToInt32(liczba, format);
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Nie udało się przekonwertować ciągu na liczbę w danym formacie.");
+            return 0;
+        }
     }
+
 
     public static String ToString(long liczba,bool Padding)
     {

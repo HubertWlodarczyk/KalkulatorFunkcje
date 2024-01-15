@@ -10,3 +10,15 @@ C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net8.
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net8.0-windows\refint\KalkulatorFunkcje.dll
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net8.0-windows\KalkulatorFunkcje.pdb
 C:\Users\huber\RiderProjects\KalkulatorFunkcje\KalkulatorFunkcje\obj\Debug\net8.0-windows\ref\KalkulatorFunkcje.dll
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\bin\Debug\net8.0-windows\KalkulatorFunkcje.deps.json
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\bin\Debug\net8.0-windows\KalkulatorFunkcje.dll
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\bin\Debug\net8.0-windows\KalkulatorFunkcje.pdb
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\KalkulatorFunkcje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\KalkulatorFunkcje.AssemblyInfoInputs.cache
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\KalkulatorFunkcje.AssemblyInfo.cs
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\KalkulatorFunkcje.csproj.CoreCompileInputs.cache
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\KalkulatorFunkcje.sourcelink.json
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\KalkulatorFunkcje.dll
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\refint\KalkulatorFunkcje.dll
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\KalkulatorFunkcje.pdb
+C:\Users\mierz\RiderProjects\GIT\KalkulatorFunkcje\obj\Debug\net8.0-windows\ref\KalkulatorFunkcje.dll

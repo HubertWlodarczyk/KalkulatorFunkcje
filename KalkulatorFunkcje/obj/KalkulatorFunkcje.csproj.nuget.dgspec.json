@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {}
+    "C:\\Users\\mierz\\RiderProjects\\GIT\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {
+    "C:\\Users\\mierz\\RiderProjects\\GIT\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj",
+        "projectUniqueName": "C:\\Users\\mierz\\RiderProjects\\GIT\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj",
         "projectName": "KalkulatorFunkcje",
-        "projectPath": "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj",
-        "packagesPath": "C:\\Users\\huber\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\huber\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\obj\\",
+        "projectPath": "C:\\Users\\mierz\\RiderProjects\\GIT\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj",
+        "packagesPath": "C:\\Users\\mierz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mierz\\RiderProjects\\GIT\\KalkulatorFunkcje\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\huber\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\mierz\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\huber\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
