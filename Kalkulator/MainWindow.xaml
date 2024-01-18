@@ -68,31 +68,31 @@
         <Button Grid.Row="9" Grid.Column="3">Rsh</Button>
         <Button Grid.Row="10" Grid.Column="3">And</Button>
         
-        <Button Grid.Row="5" Grid.Column="4" Click="Update">A</Button>
-        <Button Grid.Row="6" Grid.Column="4" Click="Update">B</Button>
-        <Button Grid.Row="7" Grid.Column="4" Click="Update">C</Button>
-        <Button Grid.Row="8" Grid.Column="4" Click="Update">D</Button>
-        <Button Grid.Row="9" Grid.Column="4" Click="Update">E</Button>
-        <Button Grid.Row="10" Grid.Column="4" Click="Update">F</Button>
+        <Button Grid.Row="5" Grid.Column="4" Click="Update" Name="A">A</Button>
+        <Button Grid.Row="6" Grid.Column="4" Click="Update" Name="B">B</Button>
+        <Button Grid.Row="7" Grid.Column="4" Click="Update" Name="C">C</Button>
+        <Button Grid.Row="8" Grid.Column="4" Click="Update" Name="D">D</Button>
+        <Button Grid.Row="9" Grid.Column="4" Click="Update" Name="E">E</Button>
+        <Button Grid.Row="10" Grid.Column="4" Click="Update" Name="F">F</Button>
         
         <Button Grid.Row="5" Grid.Column="5">MC</Button>
         <Button Grid.Row="6" Grid.Column="5">BACK</Button>
-        <Button Grid.Row="7" Grid.Column="5" Click="Update">7</Button>
-        <Button Grid.Row="8" Grid.Column="5" Click="Update">4</Button>
-        <Button Grid.Row="9" Grid.Column="5" Click="Update">1</Button>
-        <Button Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2" Click="Update">0</Button>
+        <Button Grid.Row="7" Grid.Column="5" Click="Update" Name="7">7</Button>
+        <Button Grid.Row="8" Grid.Column="5" Click="Update" Name="4">4</Button>
+        <Button Grid.Row="9" Grid.Column="5" Click="Update" Name="1">1</Button>
+        <Button Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2" Click="Update"  Name="0">0</Button>
         
         <Button Grid.Row="5" Grid.Column="6">MR</Button>
         <Button Grid.Row="6" Grid.Column="6" Click="ClearEvrything">CE</Button>
-        <Button Grid.Row="7" Grid.Column="6" Click="Update">8</Button>
-        <Button Grid.Row="8" Grid.Column="6" Click="Update">5</Button>
-        <Button Grid.Row="9" Grid.Column="6" Click="Update">2</Button>
+        <Button Grid.Row="7" Grid.Column="6" Click="Update" Name="8">8</Button>
+        <Button Grid.Row="8" Grid.Column="6" Click="Update" Name="5">5</Button>
+        <Button Grid.Row="9" Grid.Column="6" Click="Update" Name="2">2</Button>
         
         <Button Grid.Row="5" Grid.Column="7">MS</Button>
         <Button Grid.Row="6" Grid.Column="7" Click="Clear">C</Button>
-        <Button Grid.Row="7" Grid.Column="7" Click="Update">9</Button>
-        <Button Grid.Row="8" Grid.Column="7" Click="Update">6</Button>
-        <Button Grid.Row="9" Grid.Column="7" Click="Update">3</Button>
+        <Button Grid.Row="7" Grid.Column="7" Click="Update" Name="9">9</Button>
+        <Button Grid.Row="8" Grid.Column="7" Click="Update" Name="6">6</Button>
+        <Button Grid.Row="9" Grid.Column="7" Click="Update" Name="3">3</Button>
         <Button Grid.Row="10" Grid.Column="7" IsEnabled="False">,</Button>
         
         <Button Grid.Row="5" Grid.Column="8">M+</Button>

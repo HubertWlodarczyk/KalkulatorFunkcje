@@ -2,10 +2,10 @@
 
 public static class Liczba
 {
-    public static int rozmiar=8;
-    public static int format=10;
+    public static int rozmiar = 64;
+    public static int format = 10;
     public static long firstValue;
-    public static long wartosc=0;
+    public static long wartosc = 0;
 
     public static void SetQword()
     {
@@ -66,6 +66,13 @@ public static class Liczba
         var a = Convert.ToString(liczba, format);
         a = a.Substring(Math.Max(0, a.Length - rozmiar));        
         if(Padding) a=a.PadLeft(rozmiar, '0');
+        return a;
+    }
+
+    public static String ToString(long liczba, int formatToConvert)
+    {
+        var a = Convert.ToString(liczba, formatToConvert);
+        a = a.Substring(Math.Max(0, a.Length - rozmiar));
         return a;
     }
 }
