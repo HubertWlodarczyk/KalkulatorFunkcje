@@ -26,6 +26,8 @@ namespace Kalkulator
         public MainWindow()
         {
             InitializeComponent();
+            UpdateButtonEnabledState();
+            UpdateWordLengthValue();
         }
 
         private void Update(object sender, RoutedEventArgs e)
@@ -72,50 +74,84 @@ namespace Kalkulator
             ValueBox.Clear();
             operation = PodstawoweFunkcje.DzielenieModulo;
         }
-        private void Equal(object sender, RoutedEventArgs e) {ValueBox.Text = Liczba.ToString(operation(Liczba.firstValue, Liczba.ToInt(ValueBox.Text)), false) ;}
+        private void Equal(object sender, RoutedEventArgs e) {ValueBox.Text = Liczba.ToString(operation(Liczba.firstValue, Liczba.ToInt(ValueBox.Text)), false);}
 
         private void NumberSystemType(int formatToConvert) {ValueBox.Text = Liczba.ToString(Convert.ToInt64(ValueBox.Text, Liczba.format), formatToConvert);}
-        //private void NumberSystemLength(int formatToConvert) {ValueBox.Text = }
-        private void ButtonSystemHex(object sender, RoutedEventArgs e) {NumberSystemType(16); Liczba.SetHexagonal(); ButtonsLock((e.Source as Button).Content.ToString());}
-        private void ButtonSystemDec(object sender, RoutedEventArgs e) {NumberSystemType(10); Liczba.SetDecimal(); ButtonsLock((e.Source as Button).Content.ToString());}
-        private void ButtonSystemOct(object sender, RoutedEventArgs e) {NumberSystemType(8); Liczba.SetOctal(); ButtonsLock((e.Source as Button).Content.ToString());}
-        private void ButtonSystemBin(object sender, RoutedEventArgs e) {NumberSystemType(2); Liczba.SetBinary(); ButtonsLock((e.Source as Button).Content.ToString());}
-        private void ButtonSystemlengthQword(object sender, RoutedEventArgs e) {Liczba.SetQword();}
-        private void ButtonSystemlengthDword(object sender, RoutedEventArgs e) {Liczba.SetDword();}
-        private void ButtonSystemlengthWord(object sender, RoutedEventArgs e) {Liczba.SetWord();}
-        private void ButtonSystemlengthByte(object sender, RoutedEventArgs e) {Liczba.SetByte();}
+        private void ButtonSystemHex(object sender, RoutedEventArgs e) {NumberSystemType(16); Liczba.SetHexagonal(); UpdateButtonEnabledState();}
+        private void ButtonSystemDec(object sender, RoutedEventArgs e) {NumberSystemType(10); Liczba.SetDecimal(); UpdateButtonEnabledState();}
+        private void ButtonSystemOct(object sender, RoutedEventArgs e) {NumberSystemType(8); Liczba.SetOctal(); UpdateButtonEnabledState();}
+        private void ButtonSystemBin(object sender, RoutedEventArgs e) {NumberSystemType(2); Liczba.SetBinary(); UpdateButtonEnabledState();}
+        
+        
+        private void ButtonSystemlengthQword(object sender, RoutedEventArgs e) {Liczba.SetQword(); UpdateButtonEnabledState(); UpdateWordLengthValue();}
+        private void ButtonSystemlengthDword(object sender, RoutedEventArgs e) {Liczba.SetDword(); UpdateButtonEnabledState(); UpdateWordLengthValue();} 
+        private void ButtonSystemlengthWord(object sender, RoutedEventArgs e) {Liczba.SetWord(); UpdateButtonEnabledState(); UpdateWordLengthValue();}
+        private void ButtonSystemlengthByte(object sender, RoutedEventArgs e) {Liczba.SetByte(); UpdateButtonEnabledState(); UpdateWordLengthValue();}
+        
+        private void UpdateWordLengthValue()
+        {
+            long currentValue = Liczba.ToInt(ValueBox.Text);
+
+            switch (Liczba.rozmiar)
+            {
+                case 64:
+                    // Ogranicz wartość do 64-bitowej liczby całkowitej (Qword)
+                    Liczba.SetQword();
+                    ValueBox.Text = Liczba.ToString(Math.Min(currentValue, long.MaxValue), false);
+                    break;
+
+                case 32:
+                    // Ogranicz wartość do 32-bitowej liczby całkowitej (Dword)
+                    Liczba.SetDword();
+                    ValueBox.Text = Liczba.ToString(Math.Min(currentValue, int.MaxValue), false);
+                    break;
+
+                case 16:
+                    // Ogranicz wartość do 16-bitowej liczby całkowitej (Word)
+                    Liczba.SetWord();
+                    ValueBox.Text = Liczba.ToString(Math.Min(currentValue, short.MaxValue), false);
+                    break;
+
+                case 8:
+                    // Ogranicz wartość do 8-bitowej liczby całkowitej (Byte)
+                    Liczba.SetByte();
+                    ValueBox.Text = Liczba.ToString(Math.Min(currentValue, sbyte.MaxValue), false);
+                    break;
+            }
+        }
+
 
         private void UpdateButtonEnabledState()
         {
             // Kolekcje przycisków dla różnych systemów liczbowych
-            List<Button> hexButtons = new List<Button> { Button.NameProperty.Name };
-            List<Button> decButtons = new List<Button> { /* Dodaj przyciski dziesiętne */ };
-            List<Button> octButtons = new List<Button> { /* Dodaj przyciski ósemkowe */ };
-            List<Button> binButtons = new List<Button> { /* Dodaj przyciski binarne */ };
+            List<Button> hexButtons = new List<Button> { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnA, btnB, btnC, btnD, btnE, btnF };
+            List<Button> decButtons = new List<Button> { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9 };
+            List<Button> octButtons = new List<Button> { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7 };
+            List<Button> binButtons = new List<Button> { btn0, btn1 };
 
             // Wszystkie przyciski
-            List<Button> allButtons = new List<Button> { /* Dodaj wszystkie przyciski */ };
+            List<Button> allButtons = new List<Button> { btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnA, btnB, btnC, btnD, btnE, btnF };
 
-            switch (currentNumberSystem)
+            switch (Liczba.format)
             {
-                case NumberSystem.Hex:
+                case 16:
+                    DisableButtons(allButtons);
                     EnableButtons(hexButtons);
-                    DisableButtons(decButtons, octButtons, binButtons);
                     break;
 
-                case NumberSystem.Dec:
+                case 10:
+                    DisableButtons(allButtons);
                     EnableButtons(decButtons);
-                    DisableButtons(hexButtons, octButtons, binButtons);
                     break;
 
-                case NumberSystem.Oct:
+                case 8:
+                    DisableButtons(allButtons);
                     EnableButtons(octButtons);
-                    DisableButtons(hexButtons, decButtons, binButtons);
                     break;
 
-                case NumberSystem.Bin:
+                case 2:
+                    DisableButtons(allButtons);
                     EnableButtons(binButtons);
-                    DisableButtons(hexButtons, decButtons, octButtons);
                     break;
             }
         }

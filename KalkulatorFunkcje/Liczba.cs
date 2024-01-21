@@ -51,7 +51,7 @@ public static class Liczba
 
         try
         {
-            return Convert.ToInt32(liczba, format);
+            return Convert.ToInt64(liczba, format);
         }
         catch (FormatException)
         {
