@@ -56,17 +56,17 @@
         
         <Button Grid.Row="5" Grid.Column="2" IsEnabled="False"></Button>
         <Button Grid.Row="6" Grid.Column="2">(</Button>
-        <Button Grid.Row="7" Grid.Column="2">RoL</Button>
-        <Button Grid.Row="8" Grid.Column="2">Or</Button>
-        <Button Grid.Row="9" Grid.Column="2">Lsh</Button>
-        <Button Grid.Row="10" Grid.Column="2">Not</Button>
+        <Button Grid.Row="7" Grid.Column="2" Click="ButtonRotateL">RoL</Button>
+        <Button Grid.Row="8" Grid.Column="2" Click="ButtonOr">Or</Button>
+        <Button Grid.Row="9" Grid.Column="2" Click="ButtonShiftL">Lsh</Button>
+        <Button Grid.Row="10" Grid.Column="2" Click="ButtonNot">Not</Button>
         
         <Button Grid.Row="5" Grid.Column="3" Click="ModuloDivision">Mod</Button>
         <Button Grid.Row="6" Grid.Column="3">)</Button>
-        <Button Grid.Row="7" Grid.Column="3">RoR</Button>
-        <Button Grid.Row="8" Grid.Column="3">Xor</Button>
-        <Button Grid.Row="9" Grid.Column="3">Rsh</Button>
-        <Button Grid.Row="10" Grid.Column="3">And</Button>
+        <Button Grid.Row="7" Grid.Column="3" Click="ButtonRotateR">RoR</Button>
+        <Button Grid.Row="8" Grid.Column="3" Click="ButtonXor">Xor</Button>
+        <Button Grid.Row="9" Grid.Column="3" Click="ButtonShiftR">Rsh</Button>
+        <Button Grid.Row="10" Grid.Column="3" Click="ButtonAnd">And</Button>
         
         <Button Grid.Row="5" Grid.Column="4" Click="Update" Name="btnA">A</Button>
         <Button Grid.Row="6" Grid.Column="4" Click="Update" Name="btnB">B</Button>

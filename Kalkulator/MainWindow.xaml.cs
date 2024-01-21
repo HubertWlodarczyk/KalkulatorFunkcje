@@ -177,6 +177,76 @@ namespace Kalkulator
             }
         }
       
+        private void ButtonAnd(object sender, RoutedEventArgs e)
+        {
+            Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
+            ValueBox.Clear();
+            operation = OperacjeNaBitach.And;
+        }
+
+        private void ButtonOr(object sender, RoutedEventArgs e)
+        {
+            Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
+            ValueBox.Clear();
+            operation = OperacjeNaBitach.Or;
+        }
+
+        private void ButtonXor(object sender, RoutedEventArgs e)
+        {
+            Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
+            ValueBox.Clear();
+            operation = OperacjeNaBitach.Xor;
+        }
+
+        private void ButtonRotateR(object sender, RoutedEventArgs e)
+        {
+            Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
+            ValueBox.Clear();
+            operation = (x, y) => OperacjeNaBitach.RotateR(x, (int)y);
+            UpdateButtonEnabledState();
+            UpdateWordLengthValue();
+        }
+
+        private void ButtonRotateL(object sender, RoutedEventArgs e)
+        {
+            Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
+            ValueBox.Clear();
+            operation = (x, y) => OperacjeNaBitach.RotateL(x, (int)y);
+            UpdateButtonEnabledState();
+            UpdateWordLengthValue();
+        }
+
+        private void ButtonShiftR(object sender, RoutedEventArgs e)
+        {
+            Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
+            ValueBox.Clear();
+            operation = (x, y) => OperacjeNaBitach.ShiftR(x, (int)y);
+            UpdateButtonEnabledState();
+            UpdateWordLengthValue();
+        }
+
+        private void ButtonShiftL(object sender, RoutedEventArgs e)
+        {
+            Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
+            ValueBox.Clear();
+            operation = (x, y) => OperacjeNaBitach.ShiftL(x, (int)y);
+            UpdateButtonEnabledState();
+            UpdateWordLengthValue();
+        }
+
+        private void ButtonNot(object sender, RoutedEventArgs e)
+        {
+            Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
+            ValueBox.Clear();
+            ValueBox.Text = OperacjeNaBitach.Not(Liczba.firstValue).ToString();
+            UpdateButtonEnabledState();
+            UpdateWordLengthValue();
+        }
+
+        private void ButtonEqualBitwise(object sender, RoutedEventArgs e)
+        {
+            ValueBox.Text = Liczba.ToString(operation(Liczba.firstValue, Liczba.ToInt(ValueBox.Text)), false);
+        }
         
     }
 }
