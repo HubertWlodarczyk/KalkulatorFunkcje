@@ -75,8 +75,8 @@
         <Button Grid.Row="9" Grid.Column="4" Click="Update" Name="btnE">E</Button>
         <Button Grid.Row="10" Grid.Column="4" Click="Update" Name="btnF">F</Button>
         
-        <Button Grid.Row="5" Grid.Column="5">MC</Button>
-        <Button Grid.Row="6" Grid.Column="5">BACK</Button>
+        <Button Grid.Row="5" Grid.Column="5" Click="ClearMemory">MC</Button>
+        <Button Grid.Row="6" Grid.Column="5" Click="back" >BACK</Button>
         <Button Grid.Row="7" Grid.Column="5" Click="Update" Name="btn7">7</Button>
         <Button Grid.Row="8" Grid.Column="5" Click="Update" Name="btn4">4</Button>
         <Button Grid.Row="9" Grid.Column="5" Click="Update" Name="btn1">1</Button>
@@ -95,8 +95,8 @@
         <Button Grid.Row="9" Grid.Column="7" Click="Update" Name="btn3">3</Button>
         <Button Grid.Row="10" Grid.Column="7" IsEnabled="False">,</Button>
         
-        <Button Grid.Row="5" Grid.Column="8">M+</Button>
-        <Button Grid.Row="6" Grid.Column="8">+/-</Button>
+        <Button Grid.Row="5" Grid.Column="8" Click="AddMemory">M+</Button>
+        <Button Grid.Row="6" Grid.Column="8" Click="ChangeSing">+/-</Button>
         <Button Grid.Row="7" Grid.Column="8" Click="Division">/</Button>
         <Button Grid.Row="8" Grid.Column="8" Click="Multiplication">*</Button>
         <Button Grid.Row="9" Grid.Column="8" Click="Substract">-</Button>

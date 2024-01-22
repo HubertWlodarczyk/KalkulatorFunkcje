@@ -70,11 +70,32 @@ public class LiczbaTesty
         Assert.That(10,Is.EqualTo(Liczba.ToInt("10")));
     }
     [Test]
-    public void KonwertujHeksagonalna()
+    public void KonwertujHeksagonalna1()
     {
         Liczba.SetHexagonal();
         Assert.That(16,Is.EqualTo(Liczba.ToInt("10")));
     }
+    [Test]
+    public void KonwertujHeksagonalna2()
+    {
+        Liczba.SetHexagonal();
+        Assert.That(0,Is.EqualTo(Liczba.ToInt("fadadfg")));
+    }
+    [Test]
+    public void KonwertujHeksagonalna3()
+    {
+        Liczba.SetHexagonal();
+        Liczba.SetBinary();
+        Assert.Throws(Is.TypeOf<Exception>().And.Message.EqualTo("Niepoprawny format lub ciąg znaków zawiera litery."), 
+            () => Is.EqualTo(Liczba.ToInt("-e0")));
+    }
+    [Test]
+    public void KonwertujHeksagonalna4()
+    {
+        Liczba.SetHexagonal();
+        Assert.That(0,Is.EqualTo(Liczba.ToInt("10rea")));
+    }
+    
     [Test]
     public void KonwertujOktalna()
     {
@@ -87,7 +108,28 @@ public class LiczbaTesty
         Liczba.SetBinary();
         Assert.That(2,Is.EqualTo(Liczba.ToInt("10")));
     }
-
+    [Test]
+    public void KonwertujBinarna2()
+    {
+        Liczba.SetBinary();
+        Liczba.SetBinary();
+        Assert.Throws(Is.TypeOf<Exception>().And.Message.EqualTo("Minus dostępny tylko w formacie dziesiętnym."), 
+            () => Is.EqualTo(Liczba.ToInt("-10")));
+    }
+    [Test]
+    public void KonwertujBinarna3()
+    {
+        Liczba.SetBinary();
+        Assert.Throws(Is.TypeOf<Exception>().And.Message.EqualTo("Niepoprawny format lub ciąg znaków zawiera litery."), 
+            () => Is.EqualTo(Liczba.ToInt("-fadfadadfadfafd")));
+    }
+    [Test]
+    public void KonwertujBinarna4()
+    {
+        Liczba.SetBinary();
+        Assert.Throws(Is.TypeOf<Exception>().And.Message.EqualTo("Minus dostępny tylko w formacie dziesiętnym."), 
+            () => Is.EqualTo(Liczba.ToInt("-0")));
+    }
     [Test]
     public void ZwrocStringDziesietnyDword()
     {
@@ -96,11 +138,18 @@ public class LiczbaTesty
         Assert.That("10",Is.EqualTo(Liczba.ToString(10,false)));
     }
     [Test]
-    public void ZwrocStringDziesietnyDwordUjemny()
+    public void ZwrocStringDziesietnyDword1()
     {
         Liczba.SetDecimal();
         Liczba.SetDword();
-        Assert.That("-10",Is.EqualTo(Liczba.ToString(-10,false)));
+        Assert.That("0",Is.EqualTo(Liczba.ToString(-0,false)));
+    }
+    [Test]
+    public void ZwrocStringDziesietnyQword()
+    {
+        Liczba.SetDecimal();
+        Liczba.SetQword();
+        Assert.That("654656456454567856",Is.EqualTo(Liczba.ToString(654656456454567856,false)));
     }
     [Test]
     public void ZwrocStringBinarnyQword()
@@ -115,6 +164,15 @@ public class LiczbaTesty
         Liczba.SetBinary();
         Liczba.SetByte();
         Assert.That(Liczba.ToString(-10,false),Is.EqualTo("11110110"));
+    }
+
+    [Test]
+    public void MinusPrzyBinarnym()
+    {
+        Liczba.SetBinary();
+        Liczba.SetQword();
+        Assert.Throws(Is.TypeOf<Exception>().And.Message.EqualTo("Minus dostępny tylko w formacie dziesiętnym."), 
+            () => Liczba.ToInt("-01010101"));
     }
     [Test]
     public void ZwrocStringSzesnastkowyWord()

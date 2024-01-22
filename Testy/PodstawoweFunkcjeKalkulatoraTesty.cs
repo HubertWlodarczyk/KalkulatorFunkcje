@@ -39,6 +39,7 @@ public class Tests
             Assert.That(0, Is.EqualTo(PodstawoweFunkcje.Odejmowanie(1, 1)));
 
         }
+        [Test]
         public void MnozenieZera()
         {
             Assert.That(0, Is.EqualTo(PodstawoweFunkcje.Mnozenie(0, 0)));

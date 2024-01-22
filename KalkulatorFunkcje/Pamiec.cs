@@ -2,18 +2,18 @@
 
 public static class Pamiec
 {
-    public static int pamiec = 0;
+    public static long pamiec = 0;
 
-    public static void Dodaj(int x)
+    public static void Dodaj(long x)
     {
         pamiec += x;
     } 
-    public static void Odejmij(int x)
+    public static void Odejmij(long x)
     {
         pamiec -= x;
     }
 
-    public static int Zwroc()
+    public static long Zwroc()
     {
         return pamiec;
     }

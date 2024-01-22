@@ -45,7 +45,12 @@ public static class Liczba
     {
         if (format != 16 && liczba.Any(char.IsLetter))
         {
-            Console.WriteLine("Niepoprawny format lub ciąg znaków zawiera litery.");
+            throw new Exception("Niepoprawny format lub ciąg znaków zawiera litery.");
+            return 0;
+        }
+        if (format != 10 && liczba.Any(a=>a=='-'))
+        {
+            throw new Exception("Minus dostępny tylko w formacie dziesiętnym.");
             return 0;
         }
 

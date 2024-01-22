@@ -236,6 +236,7 @@ namespace Kalkulator
       
         private void ButtonAnd(object sender, RoutedEventArgs e)
         {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
             operation = OperacjeNaBitach.And;
@@ -243,6 +244,7 @@ namespace Kalkulator
 
         private void ButtonOr(object sender, RoutedEventArgs e)
         {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
             operation = OperacjeNaBitach.Or;
@@ -250,6 +252,7 @@ namespace Kalkulator
 
         private void ButtonXor(object sender, RoutedEventArgs e)
         {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
             operation = OperacjeNaBitach.Xor;
@@ -257,6 +260,7 @@ namespace Kalkulator
 
         private void ButtonRotateR(object sender, RoutedEventArgs e)
         {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
             operation = (x, y) => OperacjeNaBitach.RotateR(x, (int)y);
@@ -266,6 +270,7 @@ namespace Kalkulator
 
         private void ButtonRotateL(object sender, RoutedEventArgs e)
         {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
             operation = (x, y) => OperacjeNaBitach.RotateL(x, (int)y);
@@ -275,6 +280,7 @@ namespace Kalkulator
 
         private void ButtonShiftR(object sender, RoutedEventArgs e)
         {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
             operation = (x, y) => OperacjeNaBitach.ShiftR(x, (int)y);
@@ -284,6 +290,7 @@ namespace Kalkulator
 
         private void ButtonShiftL(object sender, RoutedEventArgs e)
         {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
             operation = (x, y) => OperacjeNaBitach.ShiftL(x, (int)y);
@@ -293,6 +300,7 @@ namespace Kalkulator
 
         private void ButtonNot(object sender, RoutedEventArgs e)
         {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
             ValueBox.Text = Liczba.ToString(OperacjeNaBitach.Not(Liczba.firstValue),Liczba.format);
@@ -304,6 +312,29 @@ namespace Kalkulator
         {
             ValueBox.Text = Liczba.ToString(operation(Liczba.firstValue, Liczba.ToInt(ValueBox.Text)), false);
         }
-        
+
+        private void back(object sender, RoutedEventArgs e)
+        {
+            if(ValueBox.Text.Length>0)ValueBox.Text = ValueBox.Text.Remove(ValueBox.Text.Length-1,1);
+        }
+
+        private void ChangeSing(object sender, RoutedEventArgs e)
+        {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
+            var a=Liczba.ToInt(ValueBox.Text);
+            a *= -1;
+            ValueBox.Text = Liczba.ToString(a,false);
+        }
+
+        private void ClearMemory(object sender, RoutedEventArgs e)
+        {
+            Pamiec.Wyczysc();
+        }
+
+        private void AddMemory(object sender, RoutedEventArgs e)
+        {
+            if(ValueBox.Text.All(char.IsDigit)==false) return;
+            Pamiec.Dodaj(Liczba.ToInt(ValueBox.Text));
+        }
     }
 }
