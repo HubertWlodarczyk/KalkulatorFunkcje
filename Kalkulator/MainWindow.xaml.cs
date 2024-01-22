@@ -33,7 +33,10 @@ namespace Kalkulator
         private void Update(object sender, RoutedEventArgs e)
         {
             var text = (e.Source as Button).Content.ToString();
+            if(Liczba.ToInt(ValueBox.Text)+Liczba.ToInt(text)>=Math.Pow(2,Liczba.rozmiar)) return;
             ValueBox.Text = ValueBox.Text == "0" ? ValueBox.Text = text : ValueBox.Text += text;
+            BinBox.Text = Liczba.ToString(Liczba.ToInt(ValueBox.Text), 2,true);
+
         }
         private void ClearEvrything(object sender, RoutedEventArgs e)
         {
@@ -41,7 +44,10 @@ namespace Kalkulator
             KalkulatorFunkcje.Liczba.wartosc = 0;
         }
 
-        private void Clear(object sender, RoutedEventArgs e) {ValueBox.Text = "0";}
+        private void Clear(object sender, RoutedEventArgs e)
+        {
+            ValueBox.Text = "0";
+        }
 
         private void Add(object sender, RoutedEventArgs e)
         {
@@ -74,19 +80,70 @@ namespace Kalkulator
             ValueBox.Clear();
             operation = PodstawoweFunkcje.DzielenieModulo;
         }
-        private void Equal(object sender, RoutedEventArgs e) {ValueBox.Text = Liczba.ToString(operation(Liczba.firstValue, Liczba.ToInt(ValueBox.Text)), false);}
 
-        private void NumberSystemType(int formatToConvert) {ValueBox.Text = Liczba.ToString(Convert.ToInt64(ValueBox.Text, Liczba.format), formatToConvert);}
-        private void ButtonSystemHex(object sender, RoutedEventArgs e) {NumberSystemType(16); Liczba.SetHexagonal(); UpdateButtonEnabledState();}
-        private void ButtonSystemDec(object sender, RoutedEventArgs e) {NumberSystemType(10); Liczba.SetDecimal(); UpdateButtonEnabledState();}
-        private void ButtonSystemOct(object sender, RoutedEventArgs e) {NumberSystemType(8); Liczba.SetOctal(); UpdateButtonEnabledState();}
-        private void ButtonSystemBin(object sender, RoutedEventArgs e) {NumberSystemType(2); Liczba.SetBinary(); UpdateButtonEnabledState();}
-        
-        
-        private void ButtonSystemlengthQword(object sender, RoutedEventArgs e) {Liczba.SetQword(); UpdateButtonEnabledState(); UpdateWordLengthValue();}
-        private void ButtonSystemlengthDword(object sender, RoutedEventArgs e) {Liczba.SetDword(); UpdateButtonEnabledState(); UpdateWordLengthValue();} 
-        private void ButtonSystemlengthWord(object sender, RoutedEventArgs e) {Liczba.SetWord(); UpdateButtonEnabledState(); UpdateWordLengthValue();}
-        private void ButtonSystemlengthByte(object sender, RoutedEventArgs e) {Liczba.SetByte(); UpdateButtonEnabledState(); UpdateWordLengthValue();}
+        private void Equal(object sender, RoutedEventArgs e)
+        {
+            if(operation==null)return;
+            ValueBox.Text = Liczba.ToString(operation(Liczba.firstValue, Liczba.ToInt(ValueBox.Text)), false);
+        }
+
+        private void NumberSystemType(int formatToConvert)
+        {
+            ValueBox.Text = Liczba.ToString(Convert.ToInt64(ValueBox.Text, Liczba.format), formatToConvert);
+        }
+
+        private void ButtonSystemHex(object sender, RoutedEventArgs e)
+        {
+            NumberSystemType(16); Liczba.SetHexagonal(); 
+            UpdateButtonEnabledState();
+        }
+
+        private void ButtonSystemDec(object sender, RoutedEventArgs e)
+        {
+            NumberSystemType(10); Liczba.SetDecimal(); 
+            UpdateButtonEnabledState();
+        }
+
+        private void ButtonSystemOct(object sender, RoutedEventArgs e)
+        {
+            NumberSystemType(8); Liczba.SetOctal(); 
+            UpdateButtonEnabledState();
+        }
+
+        private void ButtonSystemBin(object sender, RoutedEventArgs e)
+        {
+            NumberSystemType(2); Liczba.SetBinary(); 
+            UpdateButtonEnabledState();
+        }
+
+
+        private void ButtonSystemlengthQword(object sender, RoutedEventArgs e)
+        {
+            Liczba.SetQword(); 
+            UpdateButtonEnabledState(); 
+            UpdateWordLengthValue();
+        }
+
+        private void ButtonSystemlengthDword(object sender, RoutedEventArgs e)
+        {
+            Liczba.SetDword(); 
+            UpdateButtonEnabledState(); 
+            UpdateWordLengthValue();
+        }
+
+        private void ButtonSystemlengthWord(object sender, RoutedEventArgs e)
+        {
+            Liczba.SetWord(); 
+            UpdateButtonEnabledState(); 
+            UpdateWordLengthValue();
+        }
+
+        private void ButtonSystemlengthByte(object sender, RoutedEventArgs e)
+        {
+            Liczba.SetByte(); 
+            UpdateButtonEnabledState(); 
+            UpdateWordLengthValue();
+        }
         
         private void UpdateWordLengthValue()
         {
@@ -97,25 +154,25 @@ namespace Kalkulator
                 case 64:
                     // Ogranicz wartość do 64-bitowej liczby całkowitej (Qword)
                     Liczba.SetQword();
-                    ValueBox.Text = Liczba.ToString(Math.Min(currentValue, long.MaxValue), false);
+                    ValueBox.Text = Liczba.ToString(currentValue, false);
                     break;
 
                 case 32:
                     // Ogranicz wartość do 32-bitowej liczby całkowitej (Dword)
                     Liczba.SetDword();
-                    ValueBox.Text = Liczba.ToString(Math.Min(currentValue, int.MaxValue), false);
+                    ValueBox.Text = Liczba.ToString(currentValue, false);
                     break;
 
                 case 16:
                     // Ogranicz wartość do 16-bitowej liczby całkowitej (Word)
                     Liczba.SetWord();
-                    ValueBox.Text = Liczba.ToString(Math.Min(currentValue, short.MaxValue), false);
+                    ValueBox.Text = Liczba.ToString(currentValue, false);
                     break;
 
                 case 8:
                     // Ogranicz wartość do 8-bitowej liczby całkowitej (Byte)
                     Liczba.SetByte();
-                    ValueBox.Text = Liczba.ToString(Math.Min(currentValue, sbyte.MaxValue), false);
+                    ValueBox.Text = Liczba.ToString(currentValue, false);
                     break;
             }
         }
@@ -238,7 +295,7 @@ namespace Kalkulator
         {
             Liczba.firstValue = Liczba.ToInt(ValueBox.Text);
             ValueBox.Clear();
-            ValueBox.Text = OperacjeNaBitach.Not(Liczba.firstValue).ToString();
+            ValueBox.Text = Liczba.ToString(OperacjeNaBitach.Not(Liczba.firstValue),Liczba.format);
             UpdateButtonEnabledState();
             UpdateWordLengthValue();
         }

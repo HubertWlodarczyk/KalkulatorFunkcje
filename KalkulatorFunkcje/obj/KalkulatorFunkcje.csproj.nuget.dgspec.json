@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {}
+    "C:\\Users\\huber\\Documents\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {
+    "C:\\Users\\huber\\Documents\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj",
+        "projectUniqueName": "C:\\Users\\huber\\Documents\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj",
         "projectName": "KalkulatorFunkcje",
-        "projectPath": "C:\\Users\\Admin\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\RiderProjects\\KalkulatorFunkcje\\KalkulatorFunkcje\\obj\\",
+        "projectPath": "C:\\Users\\huber\\Documents\\KalkulatorFunkcje\\KalkulatorFunkcje\\KalkulatorFunkcje.csproj",
+        "packagesPath": "C:\\Users\\huber\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\huber\\Documents\\KalkulatorFunkcje\\KalkulatorFunkcje\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\huber\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\huber\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

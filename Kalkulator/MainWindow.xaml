@@ -38,7 +38,7 @@
         </Grid.RowDefinitions>
         
         <TextBox Grid.Row="0" Grid.ColumnSpan="10" Grid.RowSpan="2" Name="ValueBox">0</TextBox>
-        <TextBox Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="2"></TextBox>
+        <TextBox Grid.Row="3" Grid.ColumnSpan="10" Grid.RowSpan="2" Name="BinBox" IsEnabled="False"></TextBox>
 
         
         <StackPanel Grid.Row="5" Grid.RowSpan="3" Grid.ColumnSpan="2">
